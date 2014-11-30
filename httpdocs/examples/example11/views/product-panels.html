@@ -1,0 +1,64 @@
+                <section>
+                    <ul class="nav nav-pills">
+                        <li ng-class="{active:panel.isSelected(1)}"><a href="" ng-click="panel.selectTab(1)">Description</a></li>
+                        <li ng-class="{active:panel.isSelected(2)}"><a href="" ng-click="panel.selectTab(2)">Specifications</a></li>
+                        <li ng-class="{active:panel.isSelected(3)}"><a href="" ng-click="panel.selectTab(3)">Reviews</a></li>
+                    </ul>
+                    <div class="panel" ng-show="panel.isSelected(1)">
+                        <h4>Description</h4>
+                        {{product.description}}
+                    </div>
+                    <div class="panel" ng-show="panel.isSelected(2)">
+                        <h4>Specifications</h4>
+                        <blockquote>None yet</blockquote>
+                    </div>
+                    <div class="panel" ng-show="panel.isSelected(3)">
+                        <ul>
+                            <h4>Reviews</h4>
+                            <li ng-repeat="review in product.reviews">
+                                <blockquote>
+                                    <strong class="badge badge-success">Stars: {{review.stars}}</strong>
+                                    <p>{{review.body}}</p>
+                                    <cite class="clearfix">by: {{review.author}}, {{review.createdOn | date:'MM/dd/yyyy @ h:mma'}}</cite>
+                                </blockquote>
+                            </li>
+                        </ul>
+                        <form 
+                            name="reviewForm" ng-controller="ReviewsController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" class="well" novalidate>
+                            <h4>Add a Review</h4>
+                            <blockquote>
+                                <strong>{{reviewCtrl.review.stars}} Stars</strong>
+                                <p>{{reviewCtrl.review.body}}</p>
+                                <cite class="clearfix">by: {{reviewCtrl.review.author}}, {{review.createdOn | date:'MM/dd/yyyy @ h:mma'}}</cite>
+                            </blockquote>   
+                            <fieldset class="form-group">
+                                <select class="form-control" ng-options="stars for stars in [5,4,3,2,1]"  title="Stars"  ng-model="reviewCtrl.review.stars" required>
+                                    <option value="">Rate the Product</option>
+                                    <option value="1">1 star</option>
+                                    <option value="2">2 stars</option>
+                                    <option value="3">3 stars</option>
+                                    <option value="4">4 stars</option>
+                                    <option value="5">5 stars</option>                  
+                                </select>
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <textarea class="form-control" placeholder="Write a short review of the product..." title="Review" ng-model="reviewCtrl.review.body" required></textarea>
+                            </fieldset>                            
+                            <fieldset class="form-group">
+                                <label>by:</label>
+                                <input type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" ng-model="reviewCtrl.review.author" required/>
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <input ng-model="reviewCtrl.review.color" type="radio" value="red" /> Red
+                                <input ng-model="reviewCtrl.review.color" type="radio" value="blue" /> Blue
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <input ng-model="reviewCtrl.review.terms" type="checkbox" /> I agree to the terms.
+                            </fieldset>
+                            <div> reviewForm is {{reviewForm.$valid}}</div>
+                            <fieldset class="form-group">
+                                <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+                            </fieldset>
+                        </form>                        
+                    </div>
+                </section>  

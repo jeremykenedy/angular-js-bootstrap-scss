@@ -1,0 +1,13 @@
+*._
+*._DS_Store
+._.DS_Store
+.DS_Store
+._*
+._.*
+/ref
+/video
+/videos
+Thumbs.db
+_inc/_whoami.inc
+.sass-cache
+/uploads

@@ -1,0 +1,56 @@
+/***** VARIABLES *****/
+$valid-input-border:#78FA89;
+$invalid-input-border:#FA787E;
+$full-image-height:200px;
+$thumbnail-container-width:220px;
+$thumbnail-image-height:50px;
+
+/***** GLOBAL PROPERTIES *****/
+body {
+  	padding-top: 50px;
+}
+
+/***** GLOBAL CLASSES PROPERTIES *****/
+.master-container {
+  	padding: 40px 15px;
+}
+
+/***** IMAGE GALLERY PROPERTIES *****/
+.full-img img{
+	margin:10px auto;
+	display:block;
+	max-height:$full-image-height; 
+}
+.img-thumbnails{
+	margin: 0 auto 20px;
+	width:$thumbnail-container-width;
+}
+.img-thumbnails li{
+	margin:5px;
+}
+.img-thumbnails img{
+	max-height:$thumbnail-image-height;
+	padding:10px;
+}
+
+/***** PRODUCT PROPRTIES *****/
+.list-group-item {
+	padding: 10px 15px 20px;
+}
+
+/***** DETAILS PANEL PROPERTIES *****/
+.panel ul{
+	list-style-type:none;
+}
+.products-panels .panel{
+	padding-bottom: 20px;
+}
+
+/***** ANGULAR FORM VALIDATION PROPERTIES *****/
+.ng-invalid.ng-dirty{
+	border-color:$invalid-input-border;
+}
+.ng-valid.ng-dirty{
+	border-color:$valid-input-border;
+}
+

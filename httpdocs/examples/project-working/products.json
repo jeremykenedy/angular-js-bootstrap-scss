@@ -1,0 +1,101 @@
+[
+   {
+		"name": "Azurite",
+		"description": "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
+		"shine": 10,
+		"price": 110.50,
+		"rarity": 7,
+		"color": "#CCC",
+		"faces": 14,
+		"canPurchase": true,
+		"soldOut": false,			
+		"images": [
+			"images/dodecahedron-full.jpg",
+			"images/dodecahedron2-full.jpg"
+		],
+		"reviews": [
+			{
+				"stars": 5,
+				"body": "I love this gem!",
+				"author": "joe@example.org",
+				"color": "blue",
+				"terms": 1,
+				"createdOn": 1397490980837				
+			}, 
+			{
+				"stars": 1,
+				"body": "This gem sucks.",
+				"author": "tim@example.org",
+				"color": "blue",
+				"terms": 1,
+				"createdOn": 1397490980837					
+			}
+		]
+    },
+	{
+		"name": "Dodecahedron",
+		"shine": 8,
+		"price": 2.95,
+		"rarity": 9,
+		"color": "#EEE",
+		"faces": 12,
+		"description": "Lucas ipsum dolor sit amet bria kor-uj kal wesell mirialan vima-da-boda dodonna grievous ka moff. Iblis vaathkree poggle bardan lando thennqora ki-adi-mundi vel jabba. Utapau kwi pellaeon castell bollux saurin. ",
+		"images": [
+			"images/dodecahedron-full.jpg",
+			"images/dodecahedron2-full.jpg"
+		],
+		"canPurchase": true,
+		"soldOut": false,
+		"reviews":[
+			{
+				"stars": 5,
+				"body": "I love this product!",
+				"author": "jeremykenedy@jeremykenedy.com",
+				"color": "red",
+				"terms": 1,
+				"createdOn": 1397490980837
+			},
+			{
+				"stars": 1,
+				"body": "This product sucks",
+				"author": "jeremykenedy@gmail.com",				
+				"color": "red",
+				"terms": 1,
+				"createdOn": 1397490980837
+			}
+		]
+	},
+	{
+		"name": "Pentagon Gem",
+		"shine": 5,
+		"price": 5.95,
+		"rarity": 6,
+		"color": "#DDD",
+		"faces": 8,			
+		"description": "Lars weequay logray bith beru kamino sifo-dyas xexto. Ugnaught san cognus noghri olié watto. ",
+		"images": [
+			"images/pentagon-full.jpg",
+			"images/pentagon-thumb.jpg"
+		],					
+		"canPurchase": true,
+		"soldOut": false,
+		"reviews":[
+			{
+				"stars": 3,
+				"body": "Its OK!",
+				"author": "jeremykenedy@jeremykenedy.com",
+				"color": "red",
+				"terms": 1,
+				"createdOn": 1397490980837
+			},
+			{
+				"stars": 2,
+				"body": "Meh",
+				"author": "jeremykenedy@gmail.com",					
+				"color": "red",
+				"terms": 1,
+				"createdOn": 1397490980837
+			}
+		]
+	}	
+]
